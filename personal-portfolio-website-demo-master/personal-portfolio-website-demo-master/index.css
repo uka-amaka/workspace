@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Proza+Libre:wght@700&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  color: var(--font-color);
+}
+
+body.night, html.night {
+  background-color: #131417;
+  color: #ffffff;
+  scroll-behavior: smooth;
+}
+
+.switch-wrapper{
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 30px;
+                }
+
+.switch-wrapper .sun {
+  background: url(images/white_sun_with_rays.png) no-repeat center;
+  background-size: 100%;
+}
+
+body.night .switch-wrapper .sun , html.night .switch-wrapper .sun {
+  background: url(images/sun-white.svg) no-repeat center;
+  background-size: 100%;
+}
+
+.switch-wrapper .moon, .switch-wrapper .sun {
+  width: 17px;
+  height: 17px;
+}
+
+.switch-wrapper .toggle-wrapper {
+  margin: 10px;
+}
+
+.switch-wrapper .toggle-wrapper #switch {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+.switch-wrapper .toggle-wrapper input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.switch-wrapper .toggle-wrapper label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 45px;
+  height: 25px;
+  background: grey;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+.switch-wrapper .toggle-wrapper label:after {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 1px;
+  width: 20px;
+  height: 22px;
+  background: #fff;
+  border-radius: 40px;
+  transition: 0.3s;
+}
+
+.switch-wrapper .toggle-wrapper input:checked + label {
+  background: #bada55;
+}
+
+.switch-wrapper .toggle-wrapper input:checked + label:after {
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
+}
+
+.switch-wrapper .toggle-wrapper label:active:after {
+  width: 0px;
+}
+
+.switch-wrapper .moon {
+  background: url(images/moon.png) no-repeat center;
+  background-size: 100%;
+}
+
+body.night .switch-wrapper .moon, html.night .switch-wrapper .moon {
+  background: url(images/moon-white.svg) no-repeat center;
+  background-size: 100%;
+}
+
+.switch-wrapper a, body.night .switch-wrapper a {
+  color: #007bff;
+  margin: 15px;
+}
+
+.footer {
+    padding: 50px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*position: fixed;*/
+    top: 730px;
+    bottom: 0px;
+    left: 0px;right: 0px;
+}
+
+.footer_copyright {
+    font-weight: 0.700;
+    width: 200px;
+}
+
+.footer_copyright .emoji{
+    width: 20px;
+    height: 20px;
+}
+
+.footer_links a {
+    position: relative;
+    display: inline-block;
+    color: #007bff!important;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 0 15px;
+    outline: 0;
+}
+
+.footer_links a .text {
+    font-size: .9rem;
+    display: inline;
+    letter-spacing: 1px;
+}
+
+.footer_links a:hover {
+    text-decoration: underline;
+}
+
+.footer_links img {
+    display: none;
+    width: 22px;
+}
+
+:root {
+  --spacing-1: 8px;
+  --spacing-2: 12px;
+  --spacing-3: 16px;
+  --spacing-4: 24px;
+
+  --border-radius: 12px;
+
+  --font-color: #323232;
+}
+
+.heart {
+  color: red;
+}
+
+h2 {
+  font-family: "Proza Libre", sans-serif;
+  margin: 0;
+  margin-bottom: var(--spacing-2);
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0 var(--spacing-3);
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-3) 3;
+  background-color: rgb(141, 1, 113);
+}
+
+.nav-logo{
+  display: block;
+}
+
+#logo{
+  display: block;
+  align-items: initial;
+}
+
+.navigation-items {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  align-items: center;
+  margin: 0;
+  margin-left: auto;
+  
+}
+
+.navigation-item {
+  margin: var(--spacing-1);
+}
+
+.navigation-item:hover {
+  background-color: rgb(253, 162, 215);
+}
+
+.portrait {
+  width: 300px;
+  border-radius: var(--border-radius);
+  flex-shrink: 0;
+}
+
+.about-me-container {
+  display: flex;
+}
+
+.about-me-text-container {
+  margin-right: var(--spacing-3);
+}
+
+.project-image {
+  width: 50%;
+}
+
+.project-title h3 {
+  display: inline;
+}
+
+details {
+  cursor: pointer;
+}
+
+summary {
+  list-style-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/right-arrow.svg);
+}
+
+footer {
+  margin-top: auto;
+  padding: var(--spacing-2) 0;
+  text-align: center;
+}
+
+section {
+  padding: var(--spacing-3) 0;
+}
+
+.icon {
+  font-size: 2em;
+  color: var(--font-color);
+  margin: 0 var(--spacing-1);
+}
+
+a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.cert{
+  color: rgb(255, 255, 255);
+}
+
+.cert:hover{
+  color: rgb(83, 83, 166);
+}
+
+.pirple{
+  color: purple;
+}
+.cs50{
+  color: crimson;
+}
+
+#logo {
+  margin: 0;
+}
+
+@media screen and (max-width: 768px){
+    
+    body .section, html .section {
+        display: block;
+    }
+    body .section_title, html .section_title {
+        text-align: left;
+        width: auto;
+    }
+    body .section_content, html .section_content {
+        padding-top: 30px;
+        padding-left: 50px;
+    }
+    .featured-projects .project {
+        width: 100%;
+        display: block;
+        margin-bottom: 30px;
+    }
+    .featured-projects .project_caption {
+        width: 100%;
+        margin-top: 25px;
+        margin-left: 0;
+    }
+    .switch-wrapper a, body.night .switch-wrapper a {
+        margin: 5px;
+        font-size: 8px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+  .about-me-container {
+    flex-direction: column;
+  }
+}
